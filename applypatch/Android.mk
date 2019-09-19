@@ -27,14 +27,17 @@ LOCAL_MODULE_TAGS := eng
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/include \
     $(commands_recovery_local_path)
-LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include \
+    $(commands_recovery_local_path)
 LOCAL_STATIC_LIBRARIES := \
     libotafault \
     libbase \
     libcrypto \
     libbspatch \
     libbz \
-    libz
+    libz \
+    libmtdutils \
+    libbmlutils
 LOCAL_WHOLE_STATIC_LIBRARIES += libmtdutils
 LOCAL_CFLAGS := \
     -DZLIB_CONST \

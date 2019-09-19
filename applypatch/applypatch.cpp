@@ -52,7 +52,7 @@ static int GenerateTarget(const FileContents& source_file, const std::unique_ptr
                           const std::string& target_filename,
                           const uint8_t target_sha1[SHA_DIGEST_LENGTH], const Value* bonus_data);
 
-static bool mtd_partitions_scanned = false;
+//static bool mtd_partitions_scanned = false;
 
 // Read a file into memory; store the file contents and associated metadata in *file.
 // Return 0 on success.
@@ -292,7 +292,7 @@ int WriteToPartition(const unsigned char* data, size_t len, const std::string& t
 
     switch (type) {
         case MTD: {
-            if (!mtd_partitions_scanned) {
+/*            if (!mtd_partitions_scanned) {
                 mtd_scan_partitions();
                 mtd_partitions_scanned = true;
             }
@@ -326,7 +326,7 @@ int WriteToPartition(const unsigned char* data, size_t len, const std::string& t
                 printf("error closing mtd write of %s\n", partition);
                 return -1;
             }
-            break;
+            break;*/
         }
 
         case EMMC: {

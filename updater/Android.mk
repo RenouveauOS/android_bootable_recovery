@@ -70,9 +70,10 @@ LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/include \
     external/e2fsprogs/misc
 
-LOCAL_CFLAGS := \
-    -Wall \
-    -Werror
+#LOCAL_CFLAGS := \
+#    -Wall \
+#    -Werror
+LOCAL_CFLAGS := -Wno-unused-parameter
 
 ifeq ($(BOARD_SUPPRESS_EMMC_WIPE),true)
     LOCAL_CFLAGS += -DSUPPRESS_EMMC_WIPE
@@ -99,9 +100,10 @@ LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/.. \
     $(LOCAL_PATH)/include
 
-LOCAL_CFLAGS := \
-    -Wall \
-    -Werror
+#LOCAL_CFLAGS := \
+#    -Wall \
+#    -Werror
+LOCAL_CFLAGS := -Wno-unused-parameter
 
 LOCAL_STATIC_LIBRARIES := \
     libupdater \

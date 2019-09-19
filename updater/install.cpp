@@ -153,7 +153,7 @@ Value* UIPrintFn(const char* name, State* state, const std::vector<std::unique_p
 //   Extracts a single package_file from the update package and writes it to dest_file,
 //   overwriting existing files if necessary. Without the dest_file argument, returns the
 //   contents of the package file as a binary blob.
-Value* PackageExtractFileFn(const char* name, State* state,
+/*Value* PackageExtractFileFn(const char* name, State* state,
                             const std::vector<std::unique_ptr<Expr>>& argv) {
   if (argv.size() < 1 || argv.size() > 2) {
     return ErrorAbort(state, kArgsParsingFailure, "%s() expects 1 or 2 args, got %zu", name,
@@ -235,7 +235,7 @@ Value* PackageExtractFileFn(const char* name, State* state,
 
     return new Value(VAL_BLOB, buffer);
   }
-}
+}*/
 
 // apply_patch(src_file, tgt_file, tgt_sha1, tgt_size, patch1_sha1, patch1_blob, [...])
 //   Applies a binary patch to the src_file to produce the tgt_file. If the desired target is the
